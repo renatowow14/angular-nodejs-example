@@ -1,0 +1,20 @@
+{
+    "Hostname": "nodejs-api",
+    "Names": "nodejs-api",
+    "Image": "nodejs-api:latest",
+    "Tty": true,
+    "ExposedPorts": {
+        "3080/tcp": { }
+    },
+    "HostConfig": {
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/etc/localtime",
+                "Target": "/etc/localtime",
+                "ReadOnly": false
+            }
+        ],
+        "PortBindings": { "3080/tcp": [{ "HostPort": "3080" }]}
+    }
+}
